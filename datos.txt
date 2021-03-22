@@ -1,0 +1,55 @@
+    {
+        "verb": "Become",
+        "pastsimple": "Became",
+        "significado": "Convertir"
+    },
+    {
+        "verb": "Begin",
+        "pastsimple": "Began",
+        "significado": "Empezar"
+    },
+    {
+        "verb": "Bet",
+        "pastsimple": "Bet",
+        "significado": "Apostar"
+    },
+    {
+        "verb": "Bite",
+        "pastsimple": "Bit",
+        "significado": "Morder"
+    },
+    {
+        "verb": "Blow",
+        "pastsimple": "Blew",
+        "significado": "Soplar"
+    },
+    {
+        "verb": "Break",
+        "pastsimple": "Broke",
+        "significado": "Romper"
+    },
+    {
+        "verb": "Bring",
+        "pastsimple": "Brought",
+        "significado": "Traer"
+    },
+    {
+        "verb": "Build",
+        "pastsimple": "Built",
+        "significado": "Construir"
+    },
+    {
+        "verb": "Buy",
+        "pastsimple": "Bought",
+        "significado": "Comprar"
+    },
+    {
+        "verb": "Catch",
+        "pastsimple": "Caught",
+        "significado": "Capturar"
+    },
+    {
+        "verb": "Choose",
+        "pastsimple": "Chose",
+        "significado": "Escoger"
+    }

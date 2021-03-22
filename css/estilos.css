@@ -1,0 +1,30 @@
+.texto{
+  font-size: 14vw;
+}
+
+.input,.input2,.input3{
+    height: 60px;
+    margin-bottom: 5%;
+    display: none;
+}
+
+.caja{
+    text-align: center;
+}
+
+.btn-comprobar{
+    height: 60px;
+}
+
+.btn-empezar{
+    height: 60px; 
+}
+
+.alerta{
+    width: 20%;
+    float: right;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    display: none;
+}
