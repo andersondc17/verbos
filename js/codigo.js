@@ -14,6 +14,8 @@ $(document).ready(function () {
   var verbosPasadosParticipionuevos = [];
   var verbosTraduccionnuevos = [];
 
+  var contar = 0;
+
   function aleatorio(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num;
@@ -22,6 +24,10 @@ $(document).ready(function () {
   //console.log(verbosTraduccion.length);
 
   $('.btn-comprobar').click(function () {
+
+    contar = contar+1;
+
+    $('.numero-contar').text(contar);
 
     $('.btn-comprobar').text('Siguiente')
 
