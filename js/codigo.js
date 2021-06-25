@@ -72,7 +72,7 @@ $(document).ready(function () {
     }
 
 
-    if (valorescrito.toUpperCase() == verificarVerboPasado.toUpperCase() && valorescrito2.toUpperCase() == verificarVerboParticipiotoUpperCase() && valorescrito3.toUpperCase() == verificarVerboTraduccion.toUpperCase()) {
+    if (valorescrito.toUpperCase() == verificarVerboPasado.toUpperCase() && valorescrito2.toUpperCase() == verificarVerboParticipio.toUpperCase() && valorescrito3.toUpperCase() == verificarVerboTraduccion.toUpperCase()) {
       $('.alerta').text('Correcto');
       $('.alerta').addClass('alert-success');
       $('.alerta').removeClass('alert-danger');
