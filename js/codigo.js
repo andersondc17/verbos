@@ -26,11 +26,8 @@ $(document).ready(function () {
   $('.btn-comprobar').click(function () {
 
     contar = contar+1;
-
     $('.numero-contar').text(contar);
-
     $('.btn-comprobar').text('Siguiente')
-
     numeroaleatorio = aleatorio(0, verbos.length - 1);
 
 
