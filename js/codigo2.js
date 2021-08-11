@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var verbos = ['Bear', 'Bend', 'Bleed', 'Breed','Burst','Deal','Forbid','Hang','Hold','Lay','Lead','Let','Ring','Sew','Show','Sink','Sit','Stand','Stick','Tear'];
     var verbosPasadoSimple = ['Bore', 'Bent', 'Bled', 'Bred','Burst','Dealt','Forbade','Hung','Held','Laid','Led','Let','Rang','Sewed','Showed','Sank','Sat','Stood','Stuck','Tore'];
-    var verbosPasadoParticipio = ['Borne','Bent','Bled','Bred','Burst','Dealt','Forbidden','Hung','Held','Laid','Led','Let','Rang','Sewn','Shown','Sunk','Sat','Stood','Stuck','Torn'];
+    var verbosPasadoParticipio = ['Borne','Bent','Bled','Bred','Burst','Dealt','Forbidden','Hung','Held','Laid','Led','Let','Rung','Sewn','Shown','Sunk','Sat','Stood','Stuck','Torn'];
     var verbosTraduccion = ['Soportar','Doblar','Sangrar','Criar','Estallar','Tratar','Prohibir','Colgar','Sostener','Poner','Conducir','Dejar','Llamar','Coser','Mostrar','Hundir','Sentarse','Estar de pie','Pegar','Rasgar'];
   
     var verificarVerboPasado = 'vacio';
