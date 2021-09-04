@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-    var verbos = ['Bear', 'Bend', 'Bleed', 'Breed','Burst','Deal','Forbid','Hang','Hold','Lay','Lead','Let','Ring','Sew','Show','Sink','Sit','Stand','Stick','Tear','Bind','Burn','Creep','Find out','Leap','Sling','Sow','Wind','Thrust','Strive'];
-    var verbosPasadoSimple = ['Bore', 'Bent', 'Bled', 'Bred','Burst','Dealt','Forbade','Hung','Held','Laid','Led','Let','Rang','Sewed','Showed','Sank','Sat','Stood','Stuck','Tore','Bound','Burnt','Crept','Found out','Leapt','Slung','Sowed','Wound','Thrust','Strove'];
-    var verbosPasadoParticipio = ['Borne','Bent','Bled','Bred','Burst','Dealt','Forbidden','Hung','Held','Laid','Led','Let','Rung','Sewn','Shown','Sunk','Sat','Stood','Stuck','Torn','Bound','Burnt','Crept','Found out','Leapt','Slung','Sown','Wound','Thrust','Striven'];
-    var verbosTraduccion = ['Soportar','Doblar','Sangrar','Criar','Estallar','Tratar','Prohibir','Colgar','Sostener','Poner','Conducir','Dejar','Llamar','Coser','Mostrar','Hundir','Sentarse','Estar de pie','Pegar','Rasgar','Atar','Quemar','Arrastrarse','Averiguar','Saltar','Tirar','Sembrar','Enrollar','Empujar','Esforzarse'];
+    var verbos = ['Bear', 'Bend', 'Bleed', 'Breed','Burst','Deal','Forbid','Hang','Hold','Lay','Lead','Let','Ring','Sew','Show','Sink','Sit','Stand','Stick','Tear','Bind','Burn','Creep','Find out','Leap','Sling','Sow','Wind','Thrust','Strive','Mistake','Broadcast'];
+    var verbosPasadoSimple = ['Bore', 'Bent', 'Bled', 'Bred','Burst','Dealt','Forbade','Hung','Held','Laid','Led','Let','Rang','Sewed','Showed','Sank','Sat','Stood','Stuck','Tore','Bound','Burnt','Crept','Found out','Leapt','Slung','Sowed','Wound','Thrust','Strove','Mistook','Broadcast'];
+    var verbosPasadoParticipio = ['Borne','Bent','Bled','Bred','Burst','Dealt','Forbidden','Hung','Held','Laid','Led','Let','Rung','Sewn','Shown','Sunk','Sat','Stood','Stuck','Torn','Bound','Burnt','Crept','Found out','Leapt','Slung','Sown','Wound','Thrust','Striven','Mistaken','Broadcast'];
+    var verbosTraduccion = ['Soportar','Doblar','Sangrar','Criar','Estallar','Tratar','Prohibir','Colgar','Sostener','Poner','Conducir','Dejar','Llamar','Coser','Mostrar','Hundir','Sentarse','Estar de pie','Pegar','Rasgar','Atar','Quemar','Arrastrarse','Averiguar','Saltar','Tirar','Sembrar','Enrollar','Empujar','Esforzarse','Equivocar','Transmitir'];
   
     var verificarVerboPasado = 'vacio';
     var verificarVerboParticipio = 'vacio';
