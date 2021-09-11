@@ -12,12 +12,16 @@
     text-align: center;
 }
 
-.btn-comprobar{
+.botones{
     height: 60px;
 }
 
 .btn-empezar{
     height: 60px; 
+}
+
+.btn-siguiente{
+    display: none;
 }
 
 .alerta{
