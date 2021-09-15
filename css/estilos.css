@@ -29,10 +29,28 @@
     float: right;
     position: absolute;
     right: 10%;
-    bottom: 10%;
+    bottom: 20%;
     display: none;
 }
 
 .caja-contar{
-    text-align: right;
+    width: 20%;
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    background-color: aquamarine;
+    text-align: left;
+    z-index: -1;
+    padding: 1%;
+    line-height: 30px;
+    display: none;
+}
+
+label{
+    margin-bottom: 0px;
+}
+
+p{
+    margin-top: unset;
+    margin-bottom: unset;
 }

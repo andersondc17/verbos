@@ -14,7 +14,7 @@ $(document).ready(function () {
   var verbosPasadosParticipionuevos = [];
   var verbosTraduccionnuevos = [];
 
-  var contar = 0;
+  var contar = -1;
 
   function aleatorio(min, max) {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -34,6 +34,7 @@ $(document).ready(function () {
 
   $('.btn-siguiente').click(function () {
 
+    valorv = $('.valor-input-verbo').val();
     valorescrito = $('.input').val();
     valorescrito2 = $('.input2').val();
     valorescrito3 = $('.input3').val();
@@ -48,6 +49,12 @@ $(document).ready(function () {
     else {
       verbosfunction();
     }
+
+    $('.caja-contar').show();
+    $('.i-verbo').text(valorv);
+    $('.i-verbo-pasado-simple').text(valorescrito);
+    $('.i-verbo-pasado-participio').text(valorescrito2);
+    $('.i-verbo-traduccion').text(valorescrito3);
 
   })
 
@@ -71,6 +78,7 @@ $(document).ready(function () {
       $('.btn-comprobar').text('Finalizar')
     } else {
       $('.texto').text(valor);
+      $('.valor-input-verbo').val(valor);
     }
 
 
