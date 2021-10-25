@@ -14,9 +14,14 @@
 
 <body>
 
-    <div class="container col-4 pt-5">
+    <div class="container col-6">
 
         <h1 class="text-center p-5">Verbos Inglés</h1>
+
+        <div class="indicacion">
+            <label>Inglés</label>
+            <label>Traducido</label>
+        </div>
 
         <div>
 
@@ -25,7 +30,7 @@
             $verbos = ['0', 'Bear', 'Bend', 'Bleed', 'Breed', 'Burst', 'Deal', 'Forbid', 'Hang', 'Hold', 'Lay', 'Lead', 'Let', 'Ring', 'Sew', 'Show', 'Sink', 'Sit', 'Stand', 'Stick', 'Tear', 'Bind', 'Burn', 'Creep', 'Find out', 'Leap', 'Sling', 'Sow', 'Wind', 'Thrust', 'Strive', 'Mistake', 'Broadcast', 'Bid', 'Cast', 'Flee', 'Grind', 'Knit', 'Overcome', 'Speed', 'Spring', 'Cling', 'Shear', 'Shrink', 'Slide', 'Spill', 'Split', 'Spoil', 'Spread', 'Sting', 'Stride', 'Strike', 'Swell', 'Swing', 'Undergo', 'Undertake', 'Weave', 'Weep', 'Withdraw', 'Wring'];
             $verbosTraduccion = ['0', 'Soportar', 'Doblar', 'Sangrar', 'Criar', 'Estallar', 'Tratar', 'Prohibir', 'Colgar', 'Sostener', 'Poner', 'Conducir', 'Dejar', 'Llamar', 'Coser', 'Mostrar', 'Hundir', 'Sentarse', 'Estar de pie', 'Pegar', 'Rasgar', 'Atar', 'Quemar', 'Arrastrarse', 'Averiguar', 'Saltar', 'Tirar', 'Sembrar', 'Enrollar', 'Empujar', 'Esforzarse', 'Equivocarse', 'Transmitir', 'Pujar', 'Arrojar', 'Huir', 'Moler', 'Tejer', 'Vencer', 'Acelerar', 'Saltar', 'Agarrarse', 'Esquilar', 'Encogerse', 'Resbalar', 'Derramar', 'Partir', 'Estropear', 'Extender', 'Picar', 'Dar zancadas', 'Golpear', 'Hinchar', 'Columpiarse', 'Sufrir', 'Emprender', 'tejer', 'Llorar', 'Retirarse', 'Torcer'];
 
-            $audios = range(1, 10);
+            $audios = range(1, 24);
             $audiosazar = shuffle($audios);
             $valor = 0;
             $contar = 1;
@@ -39,9 +44,11 @@
 
                     <div class="caja-audio">
 
-                        <audio controls src="audios/ingles-2/Track<?php echo $audio ?>.mp3"></audio>
-                        <input type="text" class="input-audio<?php echo $audio ?>">
+                        <span class="numero-orden"><?php echo $valor ?>.</span><audio controls src="audios/ingles-2/Track<?php echo $audio ?>.mp3"></audio>
+                        <input type="text" class="input-audio<?php echo $audio ?> input-verbo<?php echo $audio ?>">
+                        <input type="text" class="input-traduccion<?php echo $audio ?> input-verbo<?php echo $audio ?>">
                         <input type="hidden" class="input-resuelto-audio<?php echo $audio ?>" value="<?php echo $verbos[$audio] ?>">
+                        <input type="hidden" class="input-resuelto-traduccion<?php echo $audio ?>" value="<?php echo $verbosTraduccion[$audio] ?>">
                         <!--
                       <label><?php echo $verbos[$audio] ?></label> |
                       <label><?php echo $verbosTraduccion[$audio] ?></label> 
@@ -51,7 +58,7 @@
 
                     </div>
 
-                    <?php if ($valor % 4 == 0) : ?>
+                    <?php if ($valor % 5 == 0) : ?>
                     </div>
                     <?php $contar++ ?>
                     <div class="caja-contenedor contenedor-<?php echo $contar ?>">

@@ -58,7 +58,7 @@ p{
 .caja-audio{
     width: 100%;
     float: left;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
 
 .caja-audio audio{
@@ -99,3 +99,21 @@ p{
     display: block;
 }
 
+.numero-orden{
+    float: left;
+    margin: 2%;
+    font-size: 20px;
+}
+
+.indicacion{
+    text-align: right;
+    margin-right: 16%;
+    margin-bottom: 2%;
+}
+
+.indicacion label{
+    width: 200px;
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+}
