@@ -85,7 +85,6 @@ $(document).ready(function () {
 
   }
 
-
   function verbosfunction() {
     contar = contar + 1;
     $('.numero-contar').text(contar);
