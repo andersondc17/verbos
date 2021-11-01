@@ -33,6 +33,30 @@ $(document).ready(function () {
 
 
   $('.btn-siguiente').click(function () {
+    info()
+  })
+
+  $(".form-control").keypress(function (e) {
+
+    inputval1 = $('.input');
+    inputval2 = $('.input2');
+    inputval3 = $('.input3');
+
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if (code == 13) {
+      if (inputval1.val() == '') {
+        inputval1.focus();
+      } else if (inputval2.val() == '') {
+        inputval2.focus();
+      } else if (inputval3.val() == '') {
+        inputval3.focus();
+      } else {
+        info();
+      }
+    }
+  });
+
+  function info() {
 
     valorv = $('.valor-input-verbo').val();
     valorescrito = $('.input').val();
@@ -56,7 +80,7 @@ $(document).ready(function () {
     $('.i-verbo-pasado-participio').text(valorescrito2);
     $('.i-verbo-traduccion').text(valorescrito3);
 
-  })
+  }
 
   function verbosfunction() {
     contar = contar + 1;
@@ -104,7 +128,9 @@ $(document).ready(function () {
     }
 
 
-    if (valorescrito.toUpperCase() == verificarVerboPasado.toUpperCase() && valorescrito2.toUpperCase() == verificarVerboParticipio.toUpperCase() && valorescrito3.toUpperCase() == verificarVerboTraduccion.toUpperCase()) {
+    if ($.trim(valorescrito.toUpperCase()) == verificarVerboPasado.toUpperCase() &&
+      $.trim(valorescrito2.toUpperCase()) == verificarVerboParticipio.toUpperCase() &&
+      $.trim(valorescrito3.toUpperCase()) == verificarVerboTraduccion.toUpperCase()) {
       $('.alerta').text('Correcto');
       $('.alerta').addClass('alert-success');
       $('.alerta').removeClass('alert-danger');
