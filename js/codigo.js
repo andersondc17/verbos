@@ -23,6 +23,8 @@ $(document).ready(function () {
 
   //console.log(verbosTraduccion.length);
 
+  $('.btn-comprobar').focus();
+
   $('.btn-comprobar').click(function () {
 
     $(this).hide();
@@ -30,7 +32,6 @@ $(document).ready(function () {
     verbosfunction();
 
   });
-
 
   $('.btn-siguiente').click(function () {
     info()
@@ -54,6 +55,7 @@ $(document).ready(function () {
         info();
       }
     }
+
   });
 
   function info() {

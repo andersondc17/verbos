@@ -24,8 +24,6 @@ $(document).ready(function () {
 
   //console.log(verbosTraduccion.length);
 
-
-
   $('.btn-comprobar').click(function () {
 
     $(this).hide();
