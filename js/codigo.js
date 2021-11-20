@@ -101,6 +101,8 @@ $(document).ready(function () {
     if (verbos == '') {
       $('.texto').text('No hay');
       $('.input').hide();
+      $('.input2').hide();
+      $('.input3').hide();
       $('.btn-comprobar').text('Finalizar')
     } else {
       $('.texto').text(valor);
