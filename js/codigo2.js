@@ -22,7 +22,7 @@ $(document).ready(function () {
     return num;
   }
 
-  console.log(verbosTraduccion.length);
+  //console.log(verbosTraduccion.length);
 
   $('.btn-comprobar').click(function () {
 
