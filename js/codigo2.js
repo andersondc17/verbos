@@ -98,9 +98,11 @@ $(document).ready(function () {
     $('.input3').show();
 
     if (verbos == '') {
-      $('.texto').text('No hay');
+      $('.texto').text('Completado');
       $('.input').hide();
-      $('.btn-comprobar').text('Finalizar')
+      $('.input2').hide();
+      $('.input3').hide();
+      $('.btn-siguiente').hide();
     } else {
       $('.texto').text(valor);
       $('.valor-input-verbo').val(valor);
