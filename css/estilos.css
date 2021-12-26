@@ -1,5 +1,5 @@
 .texto{
-  font-size: 14vw;
+  font-size: 200px;
 }
 
 .input,.input2,.input3{
@@ -116,4 +116,32 @@ p{
     padding: 1%;
     margin: 1%;
     text-align: center;
+}
+
+@media screen and (max-width:800px){
+.texto{
+    font-size: 50px;
+}
+
+.caja{
+   max-width: unset;
+   width: 100%;
+   padding-top: 4% !important;
+}
+
+.caja-contar{
+    width: 92%;
+    margin: 4%;
+    right: 0px;
+    position: unset;
+}
+
+.alerta{
+    width: 92%;
+    margin: 4%;
+    right: 0px;
+    position: unset;
+    float: unset;
+}
+
 }
