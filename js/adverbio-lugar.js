@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var adverbios = ['Aquí', 'Ahí', 'Cerca', 'Lejos', 'Adelante', 'Detrás', 'Opuesto','Alrededor','Más allá','Fuera','Fuera de','Encima','Algún lado','Ahí','Hacia','Debajo','Arriba','Dónde'];
-    var adverbs = ['Here', 'There', 'Near', 'Far', 'Ahead', 'Behind', 'Opposite','Around','Beyond','Out','Outside','Over','Somewhere','There','Towards','Under','Up','Where'];
+    var adverbios = ['Aquí', 'Ahí', 'Cerca', 'Lejos', 'Adelante', 'Detrás', 'Opuesto','Alrededor','Más allá','Fuera','Fuera de','Encima','Algún lado','Hacia','Debajo','Arriba','Dónde'];
+    var adverbs = ['Here', 'There', 'Near', 'Far', 'Ahead', 'Behind', 'Opposite','Around','Beyond','Out','Outside','Over','Somewhere','Towards','Under','Up','Where'];
     
 
     var verificarVerboPasado = 'vacio';
