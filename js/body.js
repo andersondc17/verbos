@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var adverbios = ['¿Cuándo?', '¿Cómo?', '¿Por qué?', '¿Quién?', '¿Qué?/¿Cuál?', '¿Dónde?'];
-    var adverbs = ['When?', 'How?', 'Why?', 'Who?', 'What?', 'Where?'];
+    var palabra = ['Cabeza', 'Cabello', 'Cara', 'Cuello', 'Hombro', 'Pecho','Brazo','Codo','Mano','Dedos','Cadera','Pierna','Rodilla','Pie','Tobillo'];
+    var word = ['Head', 'Hair', 'Face', 'Neck', 'Shoulder', 'Chest','Arm','Elbow','Hand','Fingers','Hip','Leg','Knee','Foot','Ankle'];
     
 
     var verificarVerboPasado = 'vacio';
@@ -19,7 +19,7 @@ $(document).ready(function () {
       return num;
     }
   
-    //console.log(adverbs.length);
+    //console.log(palabra.length);
   
     $('.btn-comprobar').focus();
   
@@ -73,16 +73,16 @@ $(document).ready(function () {
       contar = contar + 1;
       $('.numero-contar').text(contar);
       //$('.btn-comprobar').text('Siguiente')
-      numeroaleatorio = aleatorio(0, adverbios.length - 1);
+      numeroaleatorio = aleatorio(0, palabra.length - 1);
   
   
-      valor = adverbios[numeroaleatorio];
-      valorVerboSimple = adverbs[numeroaleatorio];
+      valor = palabra[numeroaleatorio];
+      valorVerboSimple = word[numeroaleatorio];
   
       $('.input').show();
 
   
-      if (adverbios == '') {
+      if (palabra == '') {
         $('.texto').text('Completado');
         $('.input').hide();
         $('.btn-siguiente').hide();
@@ -92,11 +92,11 @@ $(document).ready(function () {
       }
   
   
-      verificar = verbosnuevos.includes(adverbios[numeroaleatorio]);
+      verificar = verbosnuevos.includes(palabra[numeroaleatorio]);
   
       if (verificar == false) {
-        verbosnuevos.push(adverbios[numeroaleatorio])
-        verbosPasadosSimplesnuevos.push(adverbs[numeroaleatorio])
+        verbosnuevos.push(palabra[numeroaleatorio])
+        verbosPasadosSimplesnuevos.push(word[numeroaleatorio])
       }
   
   
@@ -123,12 +123,12 @@ $(document).ready(function () {
   
   
   
-      verificarVerboPasado = adverbs[numeroaleatorio];
+      verificarVerboPasado = word[numeroaleatorio];
 
   
   
-      adverbios.splice(numeroaleatorio, 1);
-      adverbs.splice(numeroaleatorio, 1);
+      palabra.splice(numeroaleatorio, 1);
+      word.splice(numeroaleatorio, 1);
 
   
       $('.input').val('');
