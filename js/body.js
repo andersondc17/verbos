@@ -5,8 +5,7 @@ $(document).ready(function () {
     
 
     var verificarVerboPasado = 'vacio';
-    var verificarVerboParticipio = 'vacio';
-    var verificarVerboTraduccion = 'vacio';
+
   
     var verbosnuevos = [];
     var verbosPasadosSimplesnuevos = [];
@@ -114,10 +113,10 @@ $(document).ready(function () {
       if ($.trim(valorescrito.toUpperCase()) == verificarVerboPasado.toUpperCase()) {
         $('.alerta').text('Correcto');
         $('.alerta').addClass('alert-success');
-        $('.alerta').removeClass('alert-danger');
-      } else if (valorescrito != verificarVerboPasado || valorescrito2 != verificarVerboParticipio || valorescrito3 != verificarVerboTraduccion) {
-        $('.alerta').text('Incorrecto');
-        $('.alerta').addClass('alert-danger');
+        $('.alerta').removeClass('alert-warning');
+      } else if (valorescrito != verificarVerboPasado) {
+        $('.alerta').text(`Incorrecto - Solución: ${verificarVerboPasado}`);
+        $('.alerta').addClass('alert-warning');
         $('.alerta').removeClass('alert-success');
       }
   
