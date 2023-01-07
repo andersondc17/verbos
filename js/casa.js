@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var palabra = ['pared', 'puerta', 'ventana', 'piso', 'techo', 'cortinas','cuadro','alfombra','sofá','cojines','mesa de centro','chimenea','humo'];
-    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffe table','fireplace','smoke'];
+    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffee table','fireplace','smoke'];
     
 
     var verificarVerboPasado = 'vacio';
