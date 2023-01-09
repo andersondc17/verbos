@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var palabra = ['pared', 'puerta', 'ventana', 'piso', 'techo', 'cortinas','cuadro','alfombra','sofá','cojines','mesa de centro','chimenea','humo'];
-    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffee table','fireplace','smoke'];
+    var palabra = ['pared', 'puerta', 'ventana', 'piso', 'techo', 'cortinas','cuadro','alfombra','sofá','cojines','mesa de centro','chimenea','humo','mesa','sillas','mantel','aparador','vasos','florero','plato','cuchara','tenedor','cuchillo','cucharita','copa','taza'];
+    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffee table','fireplace','smoke','table','chairs','tablecloth','cupboard','glasses','flower vase','dish','spoon','fork','knife','small spoon','glass','cup'];
     
 
     var verificarVerboPasado = 'vacio';
