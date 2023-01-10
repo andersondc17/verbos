@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    var palabra = ['pared', 'puerta', 'ventana', 'piso', 'techo', 'cortinas','cuadro','alfombra','sofá','cojines','mesa de centro','chimenea','humo','mesa','sillas','mantel','aparador','vasos','florero','plato','cuchara','tenedor','cuchillo','cucharita','copa','taza','horno microondas','refrigerador','mostrador','batidora','tostadora','reloj','licuadora'];
-    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffee table','fireplace','smoke','table','chairs','tablecloth','cupboard','glasses','flower vase','dish','spoon','fork','knife','small spoon','glass','cup','microwave oven','refrigerator','counter','blender','toaster','clock','mixer'];
+    var palabra = ['pared', 'puerta', 'ventana', 'piso', 'techo', 'cortinas','cuadro','alfombra','sofá','cojines','mesa de centro','chimenea','humo','mesa','sillas','mantel','aparador','vasos','florero','plato','cuchara','tenedor','cuchillo','cucharita','copa','taza','horno microondas','refrigerador','mostrador','batidora','tostadora','reloj','licuadora','bañera','ducha','espejo','lavatorio','pasta de dientes','cepillo de dientes','toalla','jaboncillo','champú','peine'];
+    var word = ['wall', 'door', 'window', 'floor', 'ceiling', 'curtains','picture','carpet','sofa','cushions','coffee table','fireplace','smoke','table','chairs','tablecloth','cupboard','glasses','flower vase','dish','spoon','fork','knife','small spoon','glass','cup','microwave oven','refrigerator','counter','blender','toaster','clock','mixer','bathtub','shower','mirror','lavatory','tooth paste','tooth brush','towel','soap','shampoo','comb'];
     
 
     var verificarVerboPasado = 'vacio';
