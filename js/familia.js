@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var palabra = ['papá', 'mamá', 'hermana', 'hermano', 'hijo', 'hija','abuelo','abuela','tío','tía','prima','sobrino','sobrina','suegro','suegra','cuñado','yerno','nuera','nieta','nieto'];
+    var palabra = ['papá', 'mamá', 'hermana', 'hermano', 'hijo', 'hija','abuela','abuelo','tío','tía','prima','sobrino','sobrina','suegro','suegra','cuñado','yerno','nuera','nieta','nieto'];
     var word = ['father', 'mother', 'sister', 'brother', 'son', 'daughter','grandmother','grandfather','uncle','aunt','cousin','nephew','niece','father in law','mother in law','brother in law','son in law','daughter in law','granddaughter','grandson'];
     
 
