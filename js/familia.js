@@ -4,7 +4,7 @@ $(document).ready(function () {
     var word = ['father', 'mother', 'sister', 'brother', 'son', 'daughter','grandmother','grandfather','uncle','aunt','cousin','nephew','niece','father in law','mother in law','brother in law','son in law','daughter in law','granddaughter','grandson'];
     
 
-    var verificarVerboPasado = 'vacio';
+    var verificarVerboPasado = 'vacio'; 
 
   
     var verbosnuevos = [];
