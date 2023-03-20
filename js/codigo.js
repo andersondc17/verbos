@@ -67,10 +67,16 @@ $(document).ready(function () {
 
     if (valorescrito == '') {
       alert('llenar campo 1');
+      $('.input').focus();
+      return;
     } else if (valorescrito2 == '') {
       alert('llenar campo 2');
+      $('.input2').focus();
+      return;
     } else if (valorescrito3 == '') {
       alert('llenar campo 3');
+      $('.input3').focus();
+      return;
     }
     else {
       verbosfunction();
@@ -78,25 +84,102 @@ $(document).ready(function () {
 
     $('.caja-contar').show();
     $('.i-verbo').text(valorv);
-    $('.i-verbo-pasado-simple').text(valorescrito);
-    $('.i-verbo-pasado-participio').text(valorescrito2);
-    $('.i-verbo-traduccion').text(valorescrito3);
-
+    //$('.i-verbo-pasado-simple').text(valorescrito);
+    //$('.i-verbo-pasado-participio').text(valorescrito2);
+    //$('.i-verbo-traduccion').text(valorescrito3);
   }
 
+  var estado = true;
+
   function verbosfunction() {
-    contar = contar + 1;
-    $('.numero-contar').text(contar);
-    //$('.btn-comprobar').text('Siguiente')
-    numeroaleatorio = aleatorio(0, verbos.length - 1);
+
+    valorescrito = $('.input').val();
+    valorescrito2 = $('.input2').val();
+    valorescrito3 = $('.input3').val();
 
 
-    valor = verbos[numeroaleatorio];
-    valorVerboSimple = verbosPasadoSimple[numeroaleatorio];
+    if (valorescrito == 'vacio') {
+      $('.alerta').hide();
+    } else {
+      $('.alerta').show();
+    }
+
+    //validar(numero, valorescrito, valorescrito2, valorescrito3);
+
+
+    if ($.trim(valorescrito.toUpperCase()) == verificarVerboPasado.toUpperCase() &&
+      $.trim(valorescrito2.toUpperCase()) == verificarVerboParticipio.toUpperCase() &&
+      $.trim(valorescrito3.toUpperCase()) == verificarVerboTraduccion.toUpperCase()) {
+      $('.alerta').text('Correcto');
+      $('.alerta').addClass('alert-success');
+      $('.alerta').removeClass('alert-danger');
+      if (valorescrito != 'vacio') {
+        estado = true;
+      }
+    } else if (valorescrito != verificarVerboPasado || valorescrito2 != verificarVerboParticipio || valorescrito3 != verificarVerboTraduccion) {
+      $('.alerta').text('Incorrecto');
+      $('.alerta').addClass('alert-danger');
+      $('.alerta').removeClass('alert-success');
+      estado = false;
+    }
+
+    if ($.trim(valorescrito.toUpperCase()) == verificarVerboPasado.toUpperCase()) {
+      $('.i-verbo-pasado-simple').text(valorescrito);
+    } else if (valorescrito != verificarVerboPasado) {
+      $('.i-verbo-pasado-simple').text(valorescrito + `/ ${verificarVerboPasado}`);
+    }
+
+    if ($.trim(valorescrito2.toUpperCase()) == verificarVerboParticipio.toUpperCase()) {
+      $('.i-verbo-pasado-participio').text(valorescrito2);
+    } else if (valorescrito2 != verificarVerboParticipio) {
+      $('.i-verbo-pasado-participio').text(valorescrito2 + `/ ${verificarVerboParticipio}`);
+    }
+
+    if ($.trim(valorescrito3.toUpperCase()) == verificarVerboTraduccion.toUpperCase()) {
+      $('.i-verbo-traduccion').text(valorescrito3);
+    } else if (valorescrito3 != verificarVerboTraduccion) {
+      $('.i-verbo-traduccion').text(valorescrito3 + `/ ${verificarVerboTraduccion}`);
+    }
+
+    if (estado == true) {
+      contar = contar + 1;
+      numeroaleatorio = aleatorio(0, verbos.length - 1);
+
+      $('.numero-contar').text(contar);
+      //$('.btn-comprobar').text('Siguiente')
+
+      valor = verbos[numeroaleatorio];
+      valorVerboSimple = verbosPasadoSimple[numeroaleatorio];
+
+      verificar = verbosnuevos.includes(verbos[numeroaleatorio]);
+
+      if (verificar == false) {
+        verbosnuevos.push(verbos[numeroaleatorio])
+        verbosPasadosSimplesnuevos.push(verbosPasadoSimple[numeroaleatorio])
+        verbosPasadosParticipionuevos.push(verbosPasadoParticipio[numeroaleatorio])
+        verbosTraduccionnuevos.push(verbosTraduccion[numeroaleatorio])
+      }
+
+      verificarVerboPasado = verbosPasadoSimple[numeroaleatorio];
+      verificarVerboParticipio = verbosPasadoParticipio[numeroaleatorio];
+      verificarVerboTraduccion = verbosTraduccion[numeroaleatorio];
+
+      verbos.splice(numeroaleatorio, 1);
+      verbosPasadoSimple.splice(numeroaleatorio, 1);
+      verbosPasadoParticipio.splice(numeroaleatorio, 1);
+      verbosTraduccion.splice(numeroaleatorio, 1);
+
+
+      $('.input').val('');
+      $('.input2').val('');
+      $('.input3').val('');
+    }
 
     $('.input').show();
     $('.input2').show();
     $('.input3').show();
+
+    $('.input').focus();
 
     if (verbos == '') {
       $('.texto').text('Completado');
@@ -110,59 +193,8 @@ $(document).ready(function () {
     }
 
 
-    verificar = verbosnuevos.includes(verbos[numeroaleatorio]);
 
-    if (verificar == false) {
-      verbosnuevos.push(verbos[numeroaleatorio])
-      verbosPasadosSimplesnuevos.push(verbosPasadoSimple[numeroaleatorio])
-      verbosPasadosParticipionuevos.push(verbosPasadoParticipio[numeroaleatorio])
-      verbosTraduccionnuevos.push(verbosTraduccion[numeroaleatorio])
-    }
-
-
-    valorescrito = $('.input').val();
-    valorescrito2 = $('.input2').val();
-    valorescrito3 = $('.input3').val();
-
-
-    if (valorescrito == 'vacio') {
-      $('alerta').hide();
-    } else {
-      $('.alerta').show();
-    }
-
-
-    if ($.trim(valorescrito.toUpperCase()) == verificarVerboPasado.toUpperCase() &&
-      $.trim(valorescrito2.toUpperCase()) == verificarVerboParticipio.toUpperCase() &&
-      $.trim(valorescrito3.toUpperCase()) == verificarVerboTraduccion.toUpperCase()) {
-      $('.alerta').text('Correcto');
-      $('.alerta').addClass('alert-success');
-      $('.alerta').removeClass('alert-danger');
-    } else if (valorescrito != verificarVerboPasado || valorescrito2 != verificarVerboParticipio || valorescrito3 != verificarVerboTraduccion) {
-      $('.alerta').text('Incorrecto');
-      $('.alerta').addClass('alert-danger');
-      $('.alerta').removeClass('alert-success');
-    }
-
-
-
-    verificarVerboPasado = verbosPasadoSimple[numeroaleatorio];
-    verificarVerboParticipio = verbosPasadoParticipio[numeroaleatorio];
-    verificarVerboTraduccion = verbosTraduccion[numeroaleatorio];
-
-
-    verbos.splice(numeroaleatorio, 1);
-    verbosPasadoSimple.splice(numeroaleatorio, 1);
-    verbosPasadoParticipio.splice(numeroaleatorio, 1);
-    verbosTraduccion.splice(numeroaleatorio, 1);
-
-    $('.input').val('');
-    $('.input').focus();
-
-    $('.input2').val('');
-    $('.input3').val('');
   }
-
 
 });
 
