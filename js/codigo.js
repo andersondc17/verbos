@@ -9,6 +9,9 @@ $(document).ready(function () {
   var verificarVerboPasado = 'vacio';
   var verificarVerboParticipio = 'vacio';
   var verificarVerboTraduccion = 'vacio';
+
+  var verificarVerboPasadoM = 'vacio';
+  var verificarVerboParticipioM = 'vacio';
   var verificarVerboTraduccionM = 'vacio';
 
   var verbosnuevos = [];
@@ -32,7 +35,6 @@ $(document).ready(function () {
     $(this).hide();
     $('.btn-siguiente').show();
     verbosfunction();
-
   });
 
   $('.btn-siguiente').click(function () {
@@ -61,7 +63,7 @@ $(document).ready(function () {
   });
 
   function info() {
-
+   
     valorv = $('.valor-input-verbo').val();
     valorescrito = $('.input').val();
     valorescrito2 = $('.input2').val();
@@ -106,8 +108,7 @@ $(document).ready(function () {
     }
 
     //validar(numero, valorescrito, valorescrito2, valorescrito3);
-
-  if (verificarVerboPasado.includes(valorescrito.toUpperCase()) &&
+  if (verificarVerboPasado.includes(valorescrito.toUpperCase())&&
       verificarVerboParticipio.includes(valorescrito2.toUpperCase()) &&
       verificarVerboTraduccion.includes(valorescrito3.toUpperCase())) {
       $('.alerta').text('Correcto');
@@ -116,6 +117,7 @@ $(document).ready(function () {
       if (valorescrito != 'vacio') {
         estado = true;
       }
+      
     } else if (valorescrito != verificarVerboPasado || valorescrito2 != verificarVerboParticipio || valorescrito3 != verificarVerboTraduccion) {
       $('.alerta').text('Incorrecto');
       $('.alerta').addClass('alert-danger');
@@ -126,13 +128,13 @@ $(document).ready(function () {
     if (verificarVerboPasado.includes(valorescrito.toUpperCase())) {
       $('.i-verbo-pasado-simple').text(valorescrito);
     } else if (!verificarVerboPasado.includes(valorescrito.toUpperCase())) {
-      $('.i-verbo-pasado-simple').text(valorescrito + `/ ${verificarVerboPasado.toLowerCase()}`);
+      $('.i-verbo-pasado-simple').text(valorescrito + `/ ${verificarVerboPasadoM}`);
     }
 
     if (verificarVerboParticipio.includes(valorescrito2.toUpperCase())) {
       $('.i-verbo-pasado-participio').text(valorescrito2);
     } else if (!verificarVerboParticipio.includes(valorescrito2.toUpperCase())) {
-      $('.i-verbo-pasado-participio').text(valorescrito2 + `/ ${verificarVerboParticipio.toLowerCase()}`);
+      $('.i-verbo-pasado-participio').text(valorescrito2 + `/ ${verificarVerboParticipioM}`);
     }
 
     if (verificarVerboTraduccion.includes(valorescrito3.toUpperCase())) {
@@ -151,7 +153,7 @@ $(document).ready(function () {
 
     if (estado == true) {
       contar = contar + 1;
-      numeroaleatorio = aleatorio(0, verbos.length - 1);
+      numeroaleatorio = 9//aleatorio(0, verbos.length - 1);
 
       $('.numero-contar').text(contar);
       //$('.btn-comprobar').text('Siguiente')
@@ -168,8 +170,8 @@ $(document).ready(function () {
         verbosTraduccionnuevos.push(verbosTraduccion[numeroaleatorio])
       }
 
-      verificarVerboPasado = verbosPasadoSimple[numeroaleatorio].toUpperCase();
-      verificarVerboParticipio = verbosPasadoParticipio[numeroaleatorio].toUpperCase();
+      verificarVerboPasado = [verbosPasadoSimple[numeroaleatorio]];
+      verificarVerboParticipio = [verbosPasadoParticipio[numeroaleatorio]];
       //verificarVerboTraduccion = verbosTraduccion[numeroaleatorio];
 
       if(Array.isArray(verbosTraduccion[numeroaleatorio])){
@@ -178,9 +180,26 @@ $(document).ready(function () {
         verificarVerboTraduccion = [verbosTraduccion[numeroaleatorio]];
       }
 
+      verificarVerboPasado = verificarVerboPasado.map(function (e) { 
+        return e.toUpperCase()
+      });
+
+      verificarVerboParticipio = verificarVerboParticipio.map(function (e) { 
+        return e.toUpperCase()
+      });
+
       verificarVerboTraduccion = verificarVerboTraduccion.map(function (e) { 
         return e.toUpperCase()
       });
+
+      verificarVerboPasadoM = verificarVerboPasado.map(function (e) { 
+        return e.toLowerCase()
+      });
+
+      verificarVerboParticipioM = verificarVerboParticipio.map(function (e) { 
+        return e.toLowerCase()
+      });
+     
       verificarVerboTraduccionM = verificarVerboTraduccion.map(function (e) { 
         return e.toLowerCase()
       });
