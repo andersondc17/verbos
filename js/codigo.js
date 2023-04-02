@@ -153,7 +153,7 @@ $(document).ready(function () {
 
     if (estado == true) {
       contar = contar + 1;
-      numeroaleatorio = 9//aleatorio(0, verbos.length - 1);
+      numeroaleatorio = aleatorio(0, verbos.length - 1);
 
       $('.numero-contar').text(contar);
       //$('.btn-comprobar').text('Siguiente')
